@@ -1,0 +1,6 @@
+#! /bin/bash
+
+set -e
+export GOPATH=$PWD
+go get github.com/bevly/bevly/bevly-server
+echo Built server binary

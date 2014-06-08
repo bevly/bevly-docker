@@ -1,0 +1,7 @@
+#! /bin/bash
+
+set -e
+rm -rf dist tmp
+./build-dev-image
+./build-bevly-server
+./build-ui

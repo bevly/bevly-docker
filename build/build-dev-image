@@ -1,0 +1,5 @@
+#! /bin/bash
+
+set -e
+echo Setting up a Docker build environment.
+docker build -t bevly/build .
