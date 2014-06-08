@@ -1,7 +1,9 @@
 #! /bin/bash
 
-echo Creating MongoDB docker container (bevly-mongodb)
+set -e
+
+echo "Creating MongoDB docker container (bevly-mongodb)"
 docker run --name bevly-mongodb -d dockerfile/mongodb
 
-echo Creating Bevly docker container (bevly-docker)
+echo "Creating Bevly docker container (bevly-docker)"
 docker run --name bevly-docker --link bevly-mongodb:mongodb -d -p 127.0.0.1:18280:80 bevly/bevly

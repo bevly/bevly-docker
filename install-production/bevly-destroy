@@ -1,0 +1,5 @@
+#! /bin/bash
+
+set -e
+echo "Deleting docker containers: bevly-docker and bevly-mongodb"
+docker rm -f bevly-docker bevly-mongodb
