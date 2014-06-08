@@ -7,6 +7,4 @@ mkdir -p production/dist
 cp -r build/dist/* production/dist/
 ( cd production && ./build-production-image )
 
-#echo "Writing production docker image to images/ (this will take a while)"
-#mkdir -p images
-#docker save bevly/bevly | gzip > images/bevly-docker-image.tar.gz
+echo Created bevly/bevly docker image, you may now 'docker push bevly/bevly'
