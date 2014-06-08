@@ -4,7 +4,7 @@ set -e
 
 echo Building the Bevly server
 docker rm bevly-build-container &>/dev/null || true
-docker run --name bevly-build-container bevly/build -c './docker-build-bevly-server'
+docker run --rm --name bevly-build-container bevly/build -c './docker-build-bevly-server'
 
 mkdir -p dist
 docker cp bevly-build-container:/home/jdoe/bin/bevly-server $PWD/dist/ 2>/dev/null || true
