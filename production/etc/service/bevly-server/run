@@ -1,2 +1,3 @@
 #!/bin/sh
-exec /sbin/setuser nobody /var/lib/bevly/bevly-server
+export MONGO_HOST=mongodb
+exec /sbin/setuser nobody /var/lib/bevly/bevly-server >/var/log/bevly.log 2>&1
