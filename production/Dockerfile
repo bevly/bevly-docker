@@ -4,7 +4,7 @@ ENV HOME /root
 
 RUN /etc/my_init.d/00_regen_ssh_host_keys.sh
 RUN apt-get update
-RUN apt-get install -y nginx-light
+RUN apt-get install -y nginx-light ca-certificates
 ADD /etc/service /etc/service/
 ADD /etc/nginx/nginx.conf /etc/nginx/
 ADD /etc/nginx/sites-available /etc/nginx/sites-available/
