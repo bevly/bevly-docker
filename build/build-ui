@@ -1,11 +1,14 @@
 #! /bin/bash
 
 set -e
-rm -rf tmp
 mkdir tmp
 
 echo "Building UI"
-( cd tmp && git clone https://github.com/bevly/bevly-ui.git )
-( cd tmp/bevly-ui && ./build )
+if [[ -f tmp/bevly-ui/.git ]]; then
+    ( cd tmp && git pull )
+else
+    ( cd tmp && git clone https://github.com/bevly/bevly-ui.git )
+fi
+( cd tmp/bevly-ui && rm -rf ./dist && ./build )
 mkdir -p dist
 cp -r tmp/bevly-ui/dist/app dist/bevly-ui
