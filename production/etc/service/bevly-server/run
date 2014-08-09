@@ -1,3 +1,4 @@
 #!/bin/sh
 export MONGO_HOST=mongodb
+export MARTINI_ENV=production
 exec /sbin/setuser nobody /var/lib/bevly/bevly-server >/var/log/bevly.log 2>&1
