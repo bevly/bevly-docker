@@ -1,10 +1,10 @@
 #! /bin/bash
 
 set -e
-mkdir tmp
+mkdir -p tmp
 
 echo "Building UI"
-if [[ -f tmp/bevly-ui/.git ]]; then
+if [[ -d tmp/bevly-ui/.git ]]; then
     ( cd tmp && git pull )
 else
     ( cd tmp && git clone https://github.com/bevly/bevly-ui.git )
