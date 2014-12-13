@@ -7,4 +7,4 @@ docker run --name bevly-mongodb -d dockerfile/mongodb
 
 sleep 2
 echo "Creating Bevly docker container (bevly-docker)"
-docker run --name bevly-docker --link bevly-mongodb:mongodb -d -p 127.0.0.1:18280:80 -p 127.0.0.1:18222:22 bevly/bevly
+bevly-create-app-container
