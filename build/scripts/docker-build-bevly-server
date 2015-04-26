@@ -2,5 +2,5 @@
 
 set -e
 export GOPATH=$PWD
-go get github.com/bevly/bevly/bevly-server
+go get github.com/bevly/bevly/cmd/bevly-server
 echo Built server binary
